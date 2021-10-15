@@ -1,1 +1,1 @@
-https://Tatsiana-Vaitovich.github.io/cssMemSlider/
+https://Tatsiana-Vaitovich.github.io/cssMemSlider/cssMemSlider/index.html
