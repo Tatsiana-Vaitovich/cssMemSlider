@@ -4,62 +4,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>memSlider</title>
+  <title>memslider__itemr</title>
   <link href="style.css" rel="stylesheet" title="style">
 </head>
 <body class="overal">
   <header>
-    <h1 class="visually-hidden">cssMemSlider</h1>
+    <h1 class="visually-hidden">cssMemslider__itemr</h1>
   </header>
   <main>
     <div class="container">
       <div class="slider">
-        <input type="radio" name="slider" id="slide1">
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
-        <input type="radio" name="slider" id="slide5" checked>
-        <div class="slides">
-          <div class="slide slide1">
-            <div class="slide__img">
-              <img src="img/slide1.jpg" alt="slide1">
-            </div>
-            <div class="slide__text">
-              <p>My whole life has been a lie...</p>
+        <input type="radio" name="slider__item" id="slide1">
+        <input type="radio" name="slider__item" id="slide2">
+        <input type="radio" name="slider__item" id="slide3">
+        <input type="radio" name="slider__item" id="slide4">
+        <input type="radio" name="slider__item" id="slide5" checked>
+        <div class="slider__item-container">
+          <div class="slider__item slider__item1">
+            <div class="slider__item-img">
+              <img src="img/slide1.jpg" alt="slide1" width="1600" height="1199">
             </div>
           </div>
-          <div class="slide slide2">
-            <div class="slide__img">
+          <div class="slider__item slider__item2">
+            <div class="slider__item-img">
               <img src="img/slide2.jpg" alt="slide2">
             </div>
-            <div class="slide__text">
-              <p>relax?
-                you tell me to relax?
-                go away before I rain fire upon you!</p>
+          </div>
+          <div class="slider__item slider__item3">
+            <div class="slider__item-img">
+              <img src="img/slide3.jpg" width="1600" height="1199" alt="slide3">
             </div>
           </div>
-          <div class="slide slide3">
-            <div class="slide__img">
-              <img src="img/slide3.jpg" alt="slide3">
-            </div>
-            <div class="slide__text">
-              <p>It's the most terrible time of the year...</p>
+          <div class="slider__item slider__item4">
+            <div class="slider__item-img">
+              <img src="img/slide4.jpg" width="1600" height="1199" alt="slide4">
             </div>
           </div>
-          <div class="slide slide4">
-            <div class="slide__img">
-              <img src="img/slide4.jpg" alt="slide4">
-            </div>
-            <div class="slide__text">
-              <p>I'd wish you a merry christmas, but grumpy cat doesn't wish anybody, but I heart you mention free pizza...</p>
-            </div>
-          </div>
-          <div class="slide slide5">
-            <div class="slide__img">
-              <img src="img/slide5.jpg" alt="slide5">
-            </div>
-            <div class="slide__text">
-              <p>Oh, great, I'm a background...</p>
+          <div class="slider__item slider__item5">
+            <div class="slider__item-img">
+              <img src="img/slide5.jpg" width="1600" height="1199" alt="slide5">
             </div>
           </div>
         </div>
@@ -69,6 +52,14 @@
           <label for="slide3" class="slider__btn"></label>
           <label for="slide4" class="slider__btn"></label>
           <label for="slide5" class="slider__btn"></label>
+        </div>
+        <div class="slider__description-container">
+          <p class="slider__description slider__description1">My whole life has been a lie...</p>
+          <p class="slider__description slider__description2">Relax?
+            you tell me to relax?</p>
+          <p class="slider__description slider__description3">It's the most nice time of the year...</p>
+          <p class="slider__description slider__description4">I'd wish you a merry christmas, but grumpy cat doesn't wish anybody, but I heart you mention free pizza...</p>
+          <p class="slider__description slider__description5">Oh, great, I'm a background...</p>
         </div>
       </div>
     </div>
