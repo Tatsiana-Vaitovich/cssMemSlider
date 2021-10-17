@@ -49,8 +49,8 @@ p {
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 40px;
-  /* background-color:#020202; */
   background-color: #302b2b;
+  border-radius: 15px;
 }
 
 .slider {
@@ -68,8 +68,9 @@ p {
   width: 100%;
   max-width: 1600px;
   margin-bottom: 20px;
-  background-image: url("img/slide5.jpg");
+  /* background-image: url("img/slide5.jpg"); */
   /* background-size: contain; */
+  background-color: silver;
   border-radius: 20px;
 }
 
@@ -280,6 +281,7 @@ p {
   .slider__btn {
     width: 16px;
     height: 16px;
+    margin-top: 7px;
     border-width: 2px;
   }
 
@@ -296,10 +298,6 @@ p {
 
 
 @media screen and (min-width: 1024px) {
-  .overal {
-    font-size: 2em;
-  }
-
   .slider__description-container {
     width: 70%;
   }
