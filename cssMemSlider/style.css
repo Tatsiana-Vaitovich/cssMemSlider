@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "Raleway Bold";
+  font-weight: normal;
+  font-style: normal;
+  src: local("Raleway Bold"), url("../font/raleway-bold-webfont.woff2") format("woff2"), url("../font/raleway-bold-webfont.woff") format("woff"), url("../font/raleway-bold-webfont.ttf") format("ttf");
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin-top: -1px;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  margin-left: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+.overal {
+  min-width: 320px;
+  max-height: 100vh;
+  width: 100%;
+  font-family: "Raleway Bold";
+  font-size: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0.05em;
+  color: #fff;
+  background-color: #f5f6fa;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #302b2b;
+  border-radius: 0.2em;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slider > input {
+  display: none;
+}
+
+.slider__item-container {
+  width: 100%;
+  max-width: 1600px;
+  margin-bottom: 2em;
+  /* background-image: url("img/slide5.jpg"); */
+  /* background-size: contain; */
+  background-color: silver;
+  border-radius: 0.3em;
+}
+
+.slider__item {
+  position: relative;
+  width: 100%;
+  /* opacity: 0; */
+  display: none;
+  left: 100%;
+  animation-name: slide;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+}
+
+.slider__description {
+  position: relative;
+  display: none;
+  left: 100%;
+  width: 100%;
+  animation-name: text;
+  animation-duration: .2s;
+  animation-timing-function: ease-out;
+}
+
+/* @-webkit-keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+} */
+
+@keyframes slide {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* @-webkit-keyframes text {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+} */
+
+@keyframes text {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+/* @-webkit-keyframes textTablet {
+  0% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+} */
+
+@keyframes textTablet {
+  0% {
+    left: 5%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.slider__item-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.slider__item-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0.3em;
+}
+
+.slider__controls {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2em; 
+}
+
+.slider__btn {
+  position: relative;
+  display: block;
+  width: 2em;
+  height: 2em;
+  background-color: #6495ED;
+  border: 0.2em solid #6495ED;
+  border-radius: 50%;
+  /* cursor: pointer; */
+  transition: .5s ease-in-out;
+}
+
+.slider__btn--outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.4em;
+  height: 2.4em;
+  cursor: pointer;
+}
+
+.slider__btn--outer:hover > .slider__btn,
+.slider__btn--outer:active > .slider__btn,
+.slider__btn--outer:focus > .slider__btn{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.slider__btn--outer:active > .slider__btn{
+  background-color: #fff;
+  border-color: #6495ED;
+}
+
+#slide1:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(1) > .slider__btn,
+#slide2:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(2) > .slider__btn,
+#slide3:checked ~ .slider__wrapper .slider__controls label:nth-of-type(3) > .slider__btn,
+#slide4:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(4) > .slider__btn,
+#slide5:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(5) > .slider__btn{
+  background-color: #302b2b;
+  border-color: #6495ED;
+}
+
+#slide1:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(1):hover > .slider__btn,
+#slide2:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(2):hover > .slider__btn,
+#slide3:checked ~ .slider__wrapper .slider__controls label:nth-of-type(3):hover > .slider__btn,
+#slide4:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(4):hover > .slider__btn,
+#slide5:checked ~ .slider__wrapper > .slider__controls label:nth-of-type(5):hover > .slider__btn{
+  background-color: #302b2b;
+  border-color: #fff;
+}
+
+/* ~ общий родственный комбинатор. позволяет выбрать родственный элемент, который находится в любом месте после данного*/
+#slide1:checked ~ .slider__item-container > .slider__item1,
+#slide2:checked ~ .slider__item-container > .slider__item2,
+#slide3:checked ~ .slider__item-container > .slider__item3,
+#slide4:checked ~ .slider__item-container > .slider__item4,
+#slide5:checked ~ .slider__item-container > .slider__item5 {
+  display: block;
+  left: 0;
+}
+
+#slide1:checked ~ .slider__wrapper > .slider__description-container > .slider__description1,
+#slide2:checked ~ .slider__wrapper > .slider__description-container > .slider__description2,
+#slide3:checked ~ .slider__wrapper > .slider__description-container > .slider__description3,
+#slide4:checked ~ .slider__wrapper > .slider__description-container > .slider__description4,
+#slide5:checked ~ .slider__wrapper > .slider__description-container > .slider__description5 {
+  display: block;
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .overal {
+    font-size: 1.5em ;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  .slider__description-container {
+    margin-right: 5%;
+    width: 65%;
+  }
+
+  .slider__controls {
+    width: 30%;
+    margin: 0;
+    margin-top: 0.2em;
+  }
+
+  .slider__btn {
+    width: 0.5em;
+    height: 0.5em;
+    border-width: 0.1em;
+  }
+
+  .slider__btn--outer {
+    width: 0.75em;
+    height: 0.75em;
+  }
+
+  .slider__description {
+    left: 5%;
+    animation-name: textTablet;
+  }
+}
+
+
+@media screen and (min-width: 1024px) {
+  .slider__description-container {
+    width: 70%;
+  }
+
+  .slider__controls {
+    width: 25%;
+  }
+
+  .slider__btn--outer {
+    width: 0.85em;
+    height: 0.85em;
+  }
+}
+
+@media  screen and (min-width: 1400px) {
+  .slider__controls {
+    width: 20%;
+  }
+
+  .slider__description-container {
+    width: 75%;
+  }
+
+  .slider__btn--outer {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .slider__controls {
+    width: 15%;
+  }
+
+  .slider__description {
+    width: 80%;
+  }
+}
